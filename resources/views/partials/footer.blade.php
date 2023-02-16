@@ -82,7 +82,7 @@ $socials = [
                 @foreach($foothead as $item)
                 <div class="d-flex align-items-center">
                     <img src=" {{ Vite::asset("resources/images/{$item['logo']}") }}" alt="not available" />
-                    <span class="ms-2"><a href="#"> {{ $item["label"] }}</a></span>
+                    <span class="ms-2"><a href="/"> {{ $item["label"] }}</a></span>
                 </div>
                 @endforeach
             </div>
@@ -115,7 +115,7 @@ $socials = [
                     <h4 class="me-4">FOLLOW US</h4>
                     <div class="mx-2 pb-1">
                         @foreach($socials as $social)
-                        <a href="#">
+                        <a href="/">
                             <img src="{{ Vite::asset("resources/images/{$social['logo']}") }}" alt="not available"
                                 style="height: 100%" />
                         </a>
