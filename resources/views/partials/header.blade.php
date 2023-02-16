@@ -107,8 +107,18 @@ $menu = [
                 </div>
             </nav>
         </div>
+
         {{-- jumbotron --}}
-        <div>PROVA JUMBOTRON</div>
+        <div class="jumbotron">
+
+        </div>
     </div>
 </body>
 </html>
+
+<style>
+.jumbotron {
+    background-image: url( {{Vite::asset("resources/images/jumbotron.jpg")}} );
+    height: 500px;
+}
+</style>
