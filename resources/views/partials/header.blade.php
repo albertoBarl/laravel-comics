@@ -1,3 +1,53 @@
+<?php 
+$menu = [
+    [
+        "voice" => "CHARACTERS",
+        "url" => "#",
+    ],
+    [
+        "voice" => "COMICS",
+        "url" => "#",
+    ],
+    [
+        "voice" => "MOVIES",
+        "url" => "#",
+    ],
+    [
+        "voice" => "TV",
+        "url" => "#",
+    ],
+    [
+        "voice" => "GAMES",
+        "url" => "#",
+    ],
+    [
+        "voice" => "COLLECTIBLES",
+        "url" => "#",
+    ],
+    [
+        "voice" => "VIDEOS",
+        "url" => "#",
+    ],
+    [
+        "voice" => "FANS",
+        "url" => "#",
+    ],
+    [
+        "voice" => "NEWS",
+        "url" => "#",
+    ],
+    [
+        "voice" => "SHOP",
+        "url" => "#",
+    ],
+    [
+        "voice" => "CHARACTERS",
+        "url" => "#",
+    ],
+];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,18 +77,29 @@
 
 {{-- HEADER --}}
     <div>
-        <div class="container">
+        <div class="container p-4">
             {{-- navabar --}}
-            <nav class="d-flex">
+            <nav class="d-flex justify-content-between align-items-center">
+
                 {{-- logo --}}
                 <div>
-                    <img src="{{ Vite::asset("resources/images/dc-logo.png") }}" alt="LOGO">
+                    <a href="/">
+                        <img src="{{ Vite::asset("resources/images/dc-logo.png") }}" alt="LOGO">
+                    </a>
                 </div>
+
                 {{-- menu --}}
-                <div>PROVA MENU</div>
+                <div class="px-5 d-flex align-items-center">
+                    <ul class="d-flex list-unstyled gap-3 align-items-center">
+                        @foreach($menu as $key => $value)
+                        <li><a class="text-decoration-none text-black" href="{{$value["url"]}}">{{ $value["voice"] }}</a></li>
+                        @endforeach
+                    </ul>
+                </div>
+
                 {{-- searchbar --}}
                 <div>
-                    <div class="form-control bg-transparent border-0">
+                    <div class="d-flex form-control bg-transparent border-0">
                         <input type="text" name="search" placeholder="Search...">
                         <button class="btn btn-primary" type="submit">SEARCH</button>
                     </div>
@@ -47,7 +108,7 @@
             </nav>
         </div>
         {{-- jumbotron --}}
-        <div></div>
+        <div>PROVA JUMBOTRON</div>
     </div>
 </body>
 </html>
