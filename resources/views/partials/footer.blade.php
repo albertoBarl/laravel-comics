@@ -74,57 +74,8 @@ $socials = [
     @vite('resources/js/app.js')
 </head>
 
-<body>
-    <!-- blue section -->
-    <header class="pre-header">
-        <div class="container">
-            <div class="d-flex justify-content-between pt-3" style="width: 100%; height: 100%">
-                @foreach($foothead as $item)
-                <div class="d-flex align-items-center">
-                    <img src=" {{ Vite::asset("resources/images/{$item['logo']}") }}" alt="not available" />
-                    <span class="ms-2"><a href="/"> {{ $item["label"] }}</a></span>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </header>
-    <!-- nav footer -->
-    <footer class="d-flex justify-content-around">
-        <div class="d-flex flex-column flex-wrap">
-            @foreach($sections as $section)
-            <div class="my-3">
-                <h4>{{ $section["label"] }}</h4>
-                <ul>
-                    @foreach($section as $key["links"])
-                        <a href="/">{{$key["links"]}}</a>
-                    </li>
-                    @endforeach
-                </ul>
-            </div>
-            @endforeach
-        </div>
-        <div class="dx">
-            <img src="{{ Vite::asset('resources/images/dc-logo-bg.png') }}" alt="not available" />
-        </div>
-    </footer>
-    <div class="deepbottom" style="height: 100px">
-        <div class="container" style="height: 100%">
-            <div class="row d-flex align-items-center" style="height: 100%">
-                <div class="col-6"><button class="mybtn">SIGN-UP NOW</button></div>
-                <div class="col-6 d-flex align-items-center py-3" style="height: 100%">
-                    <h4 class="me-4">FOLLOW US</h4>
-                    <div class="mx-2 pb-1">
-                        @foreach($socials as $social)
-                        <a href="/">
-                            <img src="{{ Vite::asset("resources/images/{$social['logo']}") }}" alt="not available"
-                                style="height: 100%" />
-                        </a>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<body id="footer">
+PROVA FOOTER
 </body>
 
 </html>

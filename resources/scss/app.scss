@@ -11,6 +11,11 @@
     box-sizing: border-box;
 }
 
-.pre-header {
-    background-color: $dc-color;
+#header {
+    .pre-header {
+        background-color: $dc-color;
+    }
+}
+
+#footer {
 }

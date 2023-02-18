@@ -40,10 +40,6 @@ $menu = [
         "voice" => "SHOP",
         "url" => "#",
     ],
-    [
-        "voice" => "CHARACTERS",
-        "url" => "#",
-    ],
 ];
 
 ?>
@@ -57,7 +53,7 @@ $menu = [
     <title>header</title>
     @vite('resources/js/app.js')
 </head>
-<body>
+<body id="header">
     {{-- PRE-HEADER --}}
     <div class="pre-header">
         <div class="container d-flex justify-content-end gap-3 text-white">
@@ -109,16 +105,7 @@ $menu = [
         </div>
 
         {{-- jumbotron --}}
-        <div class="jumbotron">
-
-        </div>
+        <div class="jumbotron" style="background-image: url( {{Vite::asset("resources/images/jumbotron.jpg")}} );"></div>
     </div>
 </body>
 </html>
-
-<style>
-.jumbotron {
-    background-image: url( {{Vite::asset("resources/images/jumbotron.jpg")}} );
-    height: 500px;
-}
-</style>
