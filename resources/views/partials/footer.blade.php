@@ -24,19 +24,40 @@ $foothead = [
 $sections = [
     [
         'label' => 'dc comics',
-        'links' => 'Characters', 'Comics', 'Movies', 'TV', 'Games', 'Videos', 'News',
+        'links' => 'Characters',
+        'Comics',
+        'Movies',
+        'TV',
+        'Games',
+        'Videos',
+        'News',
     ],
     [
         'label' => 'shop',
-        'links:' => 'Shop DC', 'Shop DC Collectibles',
+        'links:' => 'Shop DC',
+        'Shop DC Collectibles',
     ],
     [
         'label' => 'dc',
-        'links' => 'Terms Of Use', 'Privacy policy (New)', 'Ad Choices', 'Advertising', 'Jobs', 'Subscriptions', 'Talent Workshops', 'CPSC Certificates', 'Ratings', 'Shop Help', 'Contact Us',
+        'links' => 'Terms Of Use',
+        'Privacy policy (New)',
+        'Ad Choices',
+        'Advertising',
+        'Jobs',
+        'Subscriptions',
+        'Talent Workshops',
+        'CPSC Certificates',
+        'Ratings',
+        'Shop Help',
+        'Contact Us',
     ],
     [
         'label' => 'sites',
-        'links' => 'DC', 'MAD Magazine', 'DC Kids', 'DC Universe', 'DC Power Visa',
+        'links' => 'DC',
+        'MAD Magazine',
+        'DC Kids',
+        'DC Universe',
+        'DC Power Visa',
     ],
 ];
 $socials = [
@@ -74,11 +95,38 @@ $socials = [
     @vite('resources/js/app.js')
 </head>
 
-<body id="footer">
-PROVA FOOTER
+<body>
+    PROVA FOOTER
+    <div id="footer">
+        {{-- voices --}}
+        <div id="voices" class="bg-success">
+            <div class="container">
+                <div class="voicesSect">
+                    @foreach ($sections as $section)
+                        <div class="singleVoice">
+                            <h4>{{ $section['label'] }}</h4>
+                            <ul class="list-unstyled">
+                                @foreach ($section as $item)
+                                    <li><a href="."
+                                            class="text-decoration-none text-white">{{ $item }}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endforeach
+                </div>
+                <div class="rightsSect">All Site Content TM and C 2020 DC Entertainment, unless otherwise noted here.
+                    All
+                    rights reserved. <br>Cookies Settings</div>
+
+            </div>
+        </div>
+
+        {{-- depp-footer --}}
+        <div></div>
+
+    </div>
+
 </body>
 
 </html>
-
-
-
