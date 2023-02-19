@@ -95,6 +95,26 @@ a {
     #sect2 {
         background-color: white;
         padding: 50px;
+
+        .col-7 {
+            .form-control {
+                background-color: #55ba59;
+                border-radius: 0;
+                .tprice {
+                    border-right: 1px solid black;
+                    span {
+                        color: #abf494;
+                    }
+                }
+            }
+        }
+
+        .col-4 {
+            text-align: end;
+            img {
+                width: 100%;
+            }
+        }
     }
     #sect3 {
         background-color: #f6f6f6;

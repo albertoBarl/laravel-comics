@@ -9,30 +9,38 @@
         </div>
         <div id="sect2">
             <div class="container d-flex justify-content-center">
-                <div class="row">
+                <div class="row justify-content-center">
+
                     {{-- description --}}
-                    <div class="col-8">
+                    <div class="col-7">
+                        {{-- title --}}
                         <h3>{{ $singleCard['title'] }}</h3>
-                        <div class="form-control d-flex">
-                            <label class="form-control border-0"><span>U.S. Price: </span>{{ $singleCard['price'] }}
-                                <span>AVAILABLE</span></label>
+
+                        {{-- price --}}
+                        <div class="form-control d-flex justify-content-between my-3">
+                            <div class="tprice d-flex justify-content-between align-items-center w-100 px-3">
+                                <span>U.S. Price: <span class="text-white">{{ $singleCard['price'] }}</span></span>
+                                <span>AVAILABLE</span>
+                            </div>
                             <div class="dropdown">
-                                <button class="btn border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
+                                <button class="btn border-0 dropdown-toggle text-white" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     Check Availability
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item" href="#">Option n</a></li>
+                                    <li><a class="dropdown-item" href="#">Option n</a></li>
+                                    <li><a class="dropdown-item" href="#">Option n</a></li>
                                 </ul>
                             </div>
                         </div>
+
+                        {{-- description --}}
                         <p>{{ $singleCard['description'] }}</p>
                     </div>
 
                     {{-- adv --}}
-                    <div class="col-4 d-flex flex-column">
+                    <div class="col-4">
                         <label>ADVERTISEMENT</label>
                         <a href="/">
                             <img src="{{ Vite::asset('resources/images/adv.jpg') }}" alt="ADV">
