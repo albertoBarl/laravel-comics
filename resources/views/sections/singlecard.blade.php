@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    div#singleCard
+    <div id="singleCard">
+
+    </div>
 @endsection
