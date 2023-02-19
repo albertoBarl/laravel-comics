@@ -5,41 +5,41 @@
             <div class="voicesSect">
                 @foreach ($sections as $section)
                     <div class="singleVoice">
-                        <h4>{{ $section['label'] }}</h4>
+                        <h4 class="text-white text-uppercase">{{ $section['label'] }}</h4>
                         <ul class="list-unstyled">
                             @foreach ($section['links'] as $item)
-                                <li><a href="." class="text-decoration-none text-white">{{ $item }}</a>
+                                <li><a href="." style="color: grey">{{ $item }}</a>
                                 </li>
                             @endforeach
                         </ul>
                     </div>
                 @endforeach
             </div>
-            <div class="rightsSect">All Site Content TM and C 2020 DC Entertainment, unless otherwise noted here.
+            <div class="rightsSect" style="color: grey
+            ">All Site Content TM and C 2020 DC Entertainment,
+                unless otherwise <a href="/">noted here</a>.
                 All
-                rights reserved. <br>Cookies Settings</div>
+                rights reserved. <br> <a href="/">Cookies Settings</a></div>
 
         </div>
     </div>
 
     {{-- depp-footer --}}
-    <div>
-        <div class="container">
+    <div id="deepfooter">
+        <div class="container d-flex justify-content-between align-items-center py-4">
             <div>
-                <div>
-                    <button>SIGN-UP NOW!</button>
-                </div>
-                <div class="d-flex align-items-center justify-content-end gap-3">
-                    <p>FOLLOW US</p>
-                    <div class="d-flex align-items-center gap-2">
-                        @foreach ($socials as $item)
-                            <a href="/">
-                                <div><img src="{{ Vite::asset("resources/images/{$item['logo']}") }}"
-                                        alt="{{ $item['name'] }}"></div>
-                            </a>
-                        @endforeach
-
-                    </div>
+                <button class="btn">SIGN-UP NOW!</button>
+            </div>
+            <div class="d-flex align-items-center justify-content-end gap-3">
+                <label>FOLLOW US</label>
+                <div class="d-flex align-items-center gap-2">
+                    @foreach ($socials as $item)
+                        <a href="/">
+                            <div><img src="{{ Vite::asset("resources/images/{$item['logo']}") }}"
+                                    alt="{{ $item['name'] }}">
+                            </div>
+                        </a>
+                    @endforeach
                 </div>
             </div>
         </div>
