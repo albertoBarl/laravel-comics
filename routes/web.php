@@ -16,19 +16,24 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $cards = config("comics.cards");
     $sections = config("comics.sections");
+    $socials = config("comics.socials");
     $footcard = config('comics.foothead');
 
-    return view('sections.home', compact("cards", "footcard", "sections"));
+    return view('sections.home', compact("cards", "footcard", "sections", "socials"));
 })->name("home");
 
+// route fot single card page
 Route::get('/cardPage/{id}', function ($id) {
     $cards = config('comics.cards');
     $footcard = config('comics.foothead');
+    $sections = config("comics.sections");
+    $socials = config("comics.socials");
+
     $singleCard = '';
     foreach ($cards as $key => $card) {
         if ($key == $id) {
             $singleCard = $card;
         }
     }
-    return view('sections.singlecard', compact('singleCard', 'footcard'));
+    return view('sections.singlecard', compact('singleCard', 'footcard', "sections", "socials"));
 })->name('cardPage');

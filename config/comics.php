@@ -283,4 +283,26 @@ return [
             'label' => 'dc power visa',
         ],
     ],
+    "socials" => [
+        [
+            'name' => 'Facebook',
+            'logo' => 'footer-facebook.png',
+        ],
+        [
+            'name' => 'Twitter',
+            'logo' => 'footer-twitter.png',
+        ],
+        [
+            'name' => 'YouTube',
+            'logo' => 'footer-youtube.png',
+        ],
+        [
+            'name' => 'Pinterest',
+            'logo' => 'footer-pinterest.png',
+        ],
+        [
+            'name' => 'Periscope',
+            'logo' => 'footer-periscope.png',
+        ],
+    ],
 ];

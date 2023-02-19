@@ -1,29 +1,3 @@
-<?php
-
-$socials = [
-    [
-        'name' => 'Facebook',
-        'logo' => 'footer-facebook.png',
-    ],
-    [
-        'name' => 'Twitter',
-        'logo' => 'footer-twitter.png',
-    ],
-    [
-        'name' => 'YouTube',
-        'logo' => 'footer-youtube.png',
-    ],
-    [
-        'name' => 'Pinterest',
-        'logo' => 'footer-pinterest.png',
-    ],
-    [
-        'name' => 'Periscope',
-        'logo' => 'footer-periscope.png',
-    ],
-];
-?>
-
 <div id="footer">
     {{-- voices --}}
     <div id="voices">
@@ -51,27 +25,21 @@ $socials = [
     {{-- depp-footer --}}
     <div>
         <div class="container">
-            <div class="row">
-                <div class="col-6">
+            <div>
+                <div>
                     <button>SIGN-UP NOW!</button>
                 </div>
-                <div class="d-flex col-6 justify-content-end">
+                <div class="d-flex align-items-center justify-content-end gap-3">
                     <p>FOLLOW US</p>
-                    <a href=".">
-                        <div><i class="">prova</i></div>
-                    </a>
-                    <a href=".">
-                        <div><i class="">prova</i></div>
-                    </a>
-                    <a href=".">
-                        <div><i class="">prova</i></div>
-                    </a>
-                    <a href=".">
-                        <div><i class="">prova</i></div>
-                    </a>
-                    <a href=".">
-                        <div><i class="">prova</i></div>
-                    </a>
+                    <div class="d-flex align-items-center gap-2">
+                        @foreach ($socials as $item)
+                            <a href="/">
+                                <div><img src="{{ Vite::asset("resources/images/{$item['logo']}") }}"
+                                        alt="{{ $item['name'] }}"></div>
+                            </a>
+                        @endforeach
+
+                    </div>
                 </div>
             </div>
         </div>
