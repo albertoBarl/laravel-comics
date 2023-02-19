@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('sections.home', ["cards" => $cards]);
 })->name("home");
 
-Route::get('/singlecard/{id}', function ($id) {
+Route::get('/cardPage/{id}', function ($id) {
     $cards = config('comics');
     $singleCard = '';
     foreach ($cards as $key => $card) {
