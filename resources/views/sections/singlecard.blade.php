@@ -2,11 +2,15 @@
 
 @section('content')
     <div id="singleCard">
+
+        {{-- section 1 --}}
         <div id="sect1">
             <div class="container">
                 <img class="card" src="{{ $singleCard['thumb'] }} " style="width: 200px">
             </div>
         </div>
+
+        {{-- section 2 --}}
         <div id="sect2">
             <div class="container d-flex justify-content-center">
                 <div class="row justify-content-center">
@@ -14,7 +18,7 @@
                     {{-- description --}}
                     <div class="col-7">
                         {{-- title --}}
-                        <h3>{{ $singleCard['title'] }}</h3>
+                        <h3 class="text-uppercase">{{ $singleCard['title'] }}</h3>
 
                         {{-- price --}}
                         <div class="form-control d-flex justify-content-between my-3">
@@ -50,19 +54,21 @@
                 </div>
             </div>
         </div>
+
+        {{-- sectin 3 --}}
         <div id="sect3">
             <div class="container py-5">
                 <div class="row justify-content-center">
                     {{-- talent --}}
                     <div class="col-6">
-                        <h5>Talent</h5>
+                        <h4>Talent</h4>
                         <table class="table">
                             <tbody>
                                 <tr>
                                     <th scope="row">Art by:</th>
                                     <td>
                                         @foreach ($singleCard['artists'] as $item)
-                                            <a href="/">{{ $item }}</a>
+                                            /<a href="/">{{ $item }}</a>
                                         @endforeach
                                     </td>
                                 </tr>
@@ -70,7 +76,7 @@
                                     <th scope="row">Written by:</th>
                                     <td>
                                         @foreach ($singleCard['writers'] as $item)
-                                            <a href="/">{{ $item }}</a>
+                                            /<a href="/">{{ $item }}</a>
                                         @endforeach
                                     </td>
                                 </tr>
@@ -79,12 +85,12 @@
                     </div>
                     {{-- specs --}}
                     <div class="col-6">
-                        <h5>Specs</h5>
+                        <h4>Specs</h4>
                         <table class="table">
                             <tbody>
                                 <tr>
                                     <th scope="row">Series:</th>
-                                    <td>{{ $singleCard['series'] }}</td>
+                                    <td class="text-uppercase"><a href="/">{{ $singleCard['series'] }}</a></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">U.S. Price:</th>
@@ -99,16 +105,14 @@
                     </div>
                 </div>
             </div>
-            <div class="d-flex justify-content-center gap-3">
+
+            {{-- footcards --}}
+            <div class="feet d-flex justify-content-center gap-5">
                 @foreach ($footcard as $item)
-                    <a href="/">
-                        <div class="d-flex gap-3">
-                            <p class="text-uppercase" style="color: grey">{{ $item['label'] }}</p>
-                            <div>
-                                <img src="{{ Vite::asset("resources/images/{$item['logo']}") }}" alt="not available"
-                                    style="width:50px; filter:brightness(0.5)">
-                            </div>
-                        </div>
+                    <a href="/" class="d-flex justify-content-between gap-3">
+                        <p class="text-uppercase" style="color: grey">{{ $item['label'] }}</p>
+                        <img src="{{ Vite::asset("resources/images/{$item['logo']}") }}" alt="not available"
+                            style="height:50px; filter:brightness(0.5)">
                     </a>
                 @endforeach
             </div>

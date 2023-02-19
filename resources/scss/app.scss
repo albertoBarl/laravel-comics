@@ -118,6 +118,18 @@ a {
     }
     #sect3 {
         background-color: #f6f6f6;
+
+        .feet {
+            border-top: 1px solid grey;
+            a {
+                width: max-content;
+                padding: 15px 10px;
+                border-left: 1px solid grey;
+                &:last-child {
+                    border-right: 1px solid grey;
+                }
+            }
+        }
     }
 }
 
