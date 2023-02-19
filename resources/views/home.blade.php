@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+    {{-- jumbotron --}}
+    <div class="jumbotron">
+        <img src="{{ Vite::asset('resources/images/jumbotron.jpg') }}" alt="not available">
+    </div>
     <div id="comiclist">
         <div class="container d-flex justify-content-center flex-wrap gap-5">
             <section>
