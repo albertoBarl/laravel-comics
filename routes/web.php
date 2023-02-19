@@ -17,3 +17,14 @@ Route::get('/', function () {
     $cards = config("comics.cards");
     return view('sections.home', ["cards" => $cards]);
 })->name("home");
+
+Route::get('/singlecard/{id}', function ($id) {
+    $cards = config('comics');
+    $singleCard = '';
+    foreach ($cards as $key => $card) {
+        if ($key == $id) {
+            $singleCard = $card;
+        }
+    }
+    return view('sections.singlecard', compact('singleCard'));
+})->name('cardPage');

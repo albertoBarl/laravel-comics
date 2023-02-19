@@ -2,6 +2,6 @@
 
 @section('content')
     <div id="singleCard">
-
+        PROVA
     </div>
 @endsection
