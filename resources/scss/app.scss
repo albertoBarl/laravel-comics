@@ -12,6 +12,35 @@
     .pre-header {
         background-color: $dc-color;
     }
+    .jumbotron img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        object-position: top;
+    }
+}
+
+#comiclist {
+    background-color: $dark-color;
+    padding: 75px 0px;
+    position: relative;
+    section {
+        position: absolute;
+        top: -4%;
+        left: 10%;
+        background-color: $dc-color;
+        color: white;
+        padding: 15px;
+        text-transform: uppercase;
+    }
+    button {
+        position: absolute;
+        bottom: 0;
+        background-color: $dc-color;
+        color: white;
+        padding: 5px;
+        text-transform: uppercase;
+    }
 }
 
 #footer {

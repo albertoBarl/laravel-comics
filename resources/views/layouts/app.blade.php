@@ -10,9 +10,15 @@
 </head>
 
 <body>
-    @include('partials.header')
-    @yeld('content')
-    @include('partials.footer')
+    <div>
+        @include('partials.header')
+    </div>
+    <div>
+        @yield('content')
+    </div>
+    <div>
+        @include('partials.footer')
+    </div>
 </body>
 
 </html>

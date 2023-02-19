@@ -97,7 +97,8 @@ $menu = [
         </div>
 
         {{-- jumbotron --}}
-        <div class="jumbotron" style="background-image: url( {{ Vite::asset('resources/images/jumbotron.jpg') }} );">
+        <div class="jumbotron">
+            <img src="{{ Vite::asset('resources/images/jumbotron.jpg') }}" alt="not available">
         </div>
     </div>
 </div>
