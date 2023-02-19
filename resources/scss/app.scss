@@ -69,13 +69,14 @@ a {
     }
     button {
         background-color: $dc-color;
+        border-radius: 0;
         color: white;
         padding: 5px;
         text-transform: uppercase;
     }
-    .footcards {
-        background-color: $dc-color;
-    }
+}
+.footcards {
+    background-color: $dc-color;
 }
 
 #singleCard {

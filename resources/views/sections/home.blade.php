@@ -2,7 +2,7 @@
 
 @section('content')
     <div id="comiclist">
-        <div class="container d-flex justify-content-center flex-wrap gap-5 pb-5">
+        <div class="container d-flex justify-content-center flex-wrap gap-5">
             <section>
                 <h3>current series</h3>
             </section>
@@ -14,23 +14,25 @@
                     </div>
                 </a>
             @endforeach
-            <button>
+            <button class="btn px-5">
                 load more
             </button>
         </div>
-        <div class="footcards d-flex align-items-center justify-content-center gap-5 p-3">
-            @foreach ($footcard as $item)
-                <a href="/">
-                    <div class="d-flex align-items-center gap-2">
-                        <div>
-                            <img src="{{ Vite::asset("resources/images/{$item['logo']}") }}" alt="not available"
-                                style="width: 50px;">
-                        </div>
-                        <p class="text-white text-uppercase">{{ $item['label'] }}</p>
-                    </div>
-                </a>
-            @endforeach
-        </div>
 
+    </div>
+
+    {{-- footcards --}}
+    <div class="footcards d-flex align-items-center justify-content-center gap-5 p-3">
+        @foreach ($footcard as $item)
+            <a href="/">
+                <div class="d-flex align-items-center gap-2">
+                    <div>
+                        <img src="{{ Vite::asset("resources/images/{$item['logo']}") }}" alt="not available"
+                            style="width: 50px;">
+                    </div>
+                    <p class="text-white text-uppercase">{{ $item['label'] }}</p>
+                </div>
+            </a>
+        @endforeach
     </div>
 @endsection
