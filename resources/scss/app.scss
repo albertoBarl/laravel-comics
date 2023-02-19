@@ -19,6 +19,8 @@
 
 #footer {
     #voices {
+        background-color: $dark-color;
+        // background-image: url("{{ Vite::asset('resources/images/dc-logo-bg.png')}}");
         .container {
             height: 500px;
             padding: 25px 0px;

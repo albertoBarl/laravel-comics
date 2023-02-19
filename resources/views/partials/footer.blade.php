@@ -99,7 +99,7 @@ $socials = [
     PROVA FOOTER
     <div id="footer">
         {{-- voices --}}
-        <div id="voices" class="bg-success">
+        <div id="voices">
             <div class="container">
                 <div class="voicesSect">
                     @foreach ($sections as $section)
@@ -123,7 +123,33 @@ $socials = [
         </div>
 
         {{-- depp-footer --}}
-        <div></div>
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <button>SIGN-UP NOW!</button>
+                    </div>
+                    <div class="d-flex col-6 justify-content-end">
+                        <p>FOLLOW US</p>
+                        <a href=".">
+                            <div><i class="">prova</i></div>
+                        </a>
+                        <a href=".">
+                            <div><i class="">prova</i></div>
+                        </a>
+                        <a href=".">
+                            <div><i class="">prova</i></div>
+                        </a>
+                        <a href=".">
+                            <div><i class="">prova</i></div>
+                        </a>
+                        <a href=".">
+                            <div><i class="">prova</i></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 
