@@ -15,9 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $cards = config("comics.cards");
+    $sections = config("comics.sections");
     $footcard = config('comics.foothead');
 
-    return view('sections.home', compact("cards", "footcard"));
+    return view('sections.home', compact("cards", "footcard", "sections"));
 })->name("home");
 
 Route::get('/cardPage/{id}', function ($id) {

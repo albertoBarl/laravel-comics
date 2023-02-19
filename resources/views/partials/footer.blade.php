@@ -1,43 +1,5 @@
 <?php
-$sections = [
-    [
-        'label' => 'dc comics',
-        'links' => 'Characters',
-        'Comics',
-        'Movies',
-        'TV',
-        'Games',
-        'Videos',
-        'News',
-    ],
-    [
-        'label' => 'shop',
-        'links:' => 'Shop DC',
-        'Shop DC Collectibles',
-    ],
-    [
-        'label' => 'dc',
-        'links' => 'Terms Of Use',
-        'Privacy policy (New)',
-        'Ad Choices',
-        'Advertising',
-        'Jobs',
-        'Subscriptions',
-        'Talent Workshops',
-        'CPSC Certificates',
-        'Ratings',
-        'Shop Help',
-        'Contact Us',
-    ],
-    [
-        'label' => 'sites',
-        'links' => 'DC',
-        'MAD Magazine',
-        'DC Kids',
-        'DC Universe',
-        'DC Power Visa',
-    ],
-];
+
 $socials = [
     [
         'name' => 'Facebook',
@@ -71,7 +33,7 @@ $socials = [
                     <div class="singleVoice">
                         <h4>{{ $section['label'] }}</h4>
                         <ul class="list-unstyled">
-                            @foreach ($section as $item)
+                            @foreach ($section['links'] as $item)
                                 <li><a href="." class="text-decoration-none text-white">{{ $item }}</a>
                                 </li>
                             @endforeach
