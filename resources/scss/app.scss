@@ -43,6 +43,27 @@
     }
 }
 
+#singleCard {
+    position: relative;
+    #sect1 {
+        height: 100px;
+        background-color: $dc-color;
+        div {
+            img {
+                position: absolute;
+                top: -225px;
+            }
+        }
+    }
+    #sect2 {
+        background-color: white;
+        padding: 50px;
+    }
+    #sect3 {
+        background-color: #f6f6f6;
+    }
+}
+
 #footer {
     #voices {
         background-color: $dark-color;
