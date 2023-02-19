@@ -15,16 +15,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $cards = config("comics.cards");
-    return view('sections.home', ["cards" => $cards]);
+    $footcard = config('comics.foothead');
+
+    return view('sections.home', compact("cards", "footcard"));
 })->name("home");
 
 Route::get('/cardPage/{id}', function ($id) {
     $cards = config('comics.cards');
+    $footcard = config('comics.foothead');
     $singleCard = '';
     foreach ($cards as $key => $card) {
         if ($key == $id) {
             $singleCard = $card;
         }
     }
-    return view('sections.singlecard', compact('singleCard'));
+    return view('sections.singlecard', compact('singleCard', 'footcard'));
 })->name('cardPage');

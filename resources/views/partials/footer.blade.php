@@ -1,26 +1,4 @@
 <?php
-$foothead = [
-    [
-        'logo' => 'buy-comics-digital-comics.png',
-        'label' => 'digital comics',
-    ],
-    [
-        'logo' => 'buy-comics-merchandise.png',
-        'label' => 'dc merchandise',
-    ],
-    [
-        'logo' => 'buy-comics-subscriptions.png',
-        'label' => 'subscription',
-    ],
-    [
-        'logo' => 'buy-comics-shop-locator.png',
-        'label' => 'comic shop locator',
-    ],
-    [
-        'logo' => 'buy-dc-power-visa.svg',
-        'label' => 'dc power visa',
-    ],
-];
 $sections = [
     [
         'label' => 'dc comics',
