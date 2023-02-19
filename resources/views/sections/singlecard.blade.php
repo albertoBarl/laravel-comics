@@ -43,7 +43,7 @@
             </div>
         </div>
         <div id="sect3">
-            <div class="container">
+            <div class="container py-5">
                 <div class="row justify-content-center">
                     {{-- talent --}}
                     <div class="col-6">
@@ -90,19 +90,19 @@
                         </table>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    @foreach ($footcard as $item)
-                        <a href="/" class="col-2">
-                            <div class="d-flex justify-content-between">
-                                <p style="color: grey">{{ $item['label'] }}</p>
-                                <div>
-                                    <img src="{{ Vite::asset("resources/images/{$item['logo']}") }}" alt="not available"
-                                        style="width:50px; filter:brightness(0.5)">
-                                </div>
+            </div>
+            <div class="d-flex justify-content-center gap-3">
+                @foreach ($footcard as $item)
+                    <a href="/">
+                        <div class="d-flex gap-3">
+                            <p class="text-uppercase" style="color: grey">{{ $item['label'] }}</p>
+                            <div>
+                                <img src="{{ Vite::asset("resources/images/{$item['logo']}") }}" alt="not available"
+                                    style="width:50px; filter:brightness(0.5)">
                             </div>
-                        </a>
-                    @endforeach
-                </div>
+                        </div>
+                    </a>
+                @endforeach
             </div>
         </div>
     </div>

@@ -37,12 +37,13 @@ a {
         text-transform: uppercase;
     }
     button {
-        position: absolute;
-        bottom: 0;
         background-color: $dc-color;
         color: white;
         padding: 5px;
         text-transform: uppercase;
+    }
+    .footcards {
+        background-color: $dc-color;
     }
 }
 
