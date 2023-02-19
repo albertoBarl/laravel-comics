@@ -21,6 +21,22 @@ a {
         object-fit: cover;
         object-position: top;
     }
+
+    #searchbar {
+        .form-control {
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: solid $dc-color;
+            border-radius: 0px;
+            input {
+                text-align: end;
+            }
+            i {
+                font-size: 25px;
+            }
+        }
+    }
 }
 
 #comiclist {

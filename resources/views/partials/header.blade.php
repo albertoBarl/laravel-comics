@@ -1,49 +1,3 @@
-<?php
-$menu = [
-    [
-        'voice' => 'CHARACTERS',
-        'url' => '#',
-    ],
-    [
-        'voice' => 'COMICS',
-        'url' => '#',
-    ],
-    [
-        'voice' => 'MOVIES',
-        'url' => '#',
-    ],
-    [
-        'voice' => 'TV',
-        'url' => '#',
-    ],
-    [
-        'voice' => 'GAMES',
-        'url' => '#',
-    ],
-    [
-        'voice' => 'COLLECTIBLES',
-        'url' => '#',
-    ],
-    [
-        'voice' => 'VIDEOS',
-        'url' => '#',
-    ],
-    [
-        'voice' => 'FANS',
-        'url' => '#',
-    ],
-    [
-        'voice' => 'NEWS',
-        'url' => '#',
-    ],
-    [
-        'voice' => 'SHOP',
-        'url' => '#',
-    ],
-];
-
-?>
-
 <div id="header">
     {{-- PRE-HEADER --}}
     <div class="pre-header">
@@ -78,20 +32,18 @@ $menu = [
                 {{-- menu --}}
                 <div class="px-5 d-flex align-items-center">
                     <ul class="d-flex list-unstyled gap-3 align-items-center">
-                        @foreach ($menu as $key => $value)
-                            <li><a class="text-decoration-none text-black"
-                                    href="{{ $value['url'] }}">{{ $value['voice'] }}</a></li>
+                        @foreach ($menu as $item)
+                            <li><a class="text-black" href="{{ $item['url'] }}">{{ $item['voice'] }}</a></li>
                         @endforeach
                     </ul>
                 </div>
 
                 {{-- searchbar --}}
-                <div>
-                    <div class="d-flex form-control bg-transparent border-0">
-                        <input type="text" name="search" placeholder="Search...">
-                        <button class="btn btn-primary" type="submit">SEARCH</button>
+                <div id="searchbar">
+                    <div class="d-flex form-control bg-transparent">
+                        <input type="text" name="search" placeholder="Search..." class="border-0">
+                        <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </div>
-
                 </div>
             </nav>
         </div>

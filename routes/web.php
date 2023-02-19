@@ -17,9 +17,10 @@ Route::get('/', function () {
     $cards = config("comics.cards");
     $sections = config("comics.sections");
     $socials = config("comics.socials");
+    $menu = config("comics.menu");
     $footcard = config('comics.foothead');
 
-    return view('sections.home', compact("cards", "footcard", "sections", "socials"));
+    return view('sections.home', compact("cards", "footcard", "sections", "socials", "menu"));
 })->name("home");
 
 // route fot single card page
@@ -28,6 +29,8 @@ Route::get('/cardPage/{id}', function ($id) {
     $footcard = config('comics.foothead');
     $sections = config("comics.sections");
     $socials = config("comics.socials");
+    $menu = config("comics.menu");
+
 
     $singleCard = '';
     foreach ($cards as $key => $card) {
@@ -35,5 +38,5 @@ Route::get('/cardPage/{id}', function ($id) {
             $singleCard = $card;
         }
     }
-    return view('sections.singlecard', compact('singleCard', 'footcard', "sections", "socials"));
+    return view('sections.singlecard', compact('singleCard', 'footcard', "sections", "socials", "menu"));
 })->name('cardPage');

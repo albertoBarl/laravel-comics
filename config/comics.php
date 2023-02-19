@@ -305,4 +305,47 @@ return [
             'logo' => 'footer-periscope.png',
         ],
     ],
+    "menu" => [
+        [
+            'voice' => 'CHARACTERS',
+            'url' => '/',
+        ],
+        [
+            'voice' => 'COMICS',
+            'url' => '/',
+        ],
+        [
+            'voice' => 'MOVIES',
+            'url' => '/',
+        ],
+        [
+            'voice' => 'TV',
+            'url' => '/',
+        ],
+        [
+            'voice' => 'GAMES',
+            'url' => '/',
+        ],
+        [
+            'voice' => 'COLLECTIBLES',
+            'url' => '/',
+        ],
+        [
+            'voice' => 'VIDEOS',
+            'url' => '/',
+        ],
+        [
+            'voice' => 'FANS',
+            'url' => '/',
+        ],
+        [
+            'voice' => 'NEWS',
+            'url' => '/',
+        ],
+        [
+            'voice' => 'SHOP',
+            'url' => '/',
+        ],
+    ],
+
 ];
