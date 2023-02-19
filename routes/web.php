@@ -19,7 +19,7 @@ Route::get('/', function () {
 })->name("home");
 
 Route::get('/cardPage/{id}', function ($id) {
-    $cards = config('comics');
+    $cards = config('comics.cards');
     $singleCard = '';
     foreach ($cards as $key => $card) {
         if ($key == $id) {
